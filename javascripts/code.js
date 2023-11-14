@@ -15,25 +15,65 @@ Below 50    Failed
 */
 
 
-let points = prompt("What is your percentage point total?");
+let btnSubmit = document.querySelector('[data-submit]')
+
+// Create a Function:
+function displayMarks() {
+    let marks = document.querySelector('[data-marks]').value
+
+    // Label's Reference
+    let output = document.querySelector('[data-output]')
+
+    //Switch
+    switch (true) {
+        case marks < 50:
+            output.textContent = `Sorry, you failed, don't try again, you are gae`;
+        break;
+        case marks <= 59:
+            output.textContent = `Passed`;
+        break;
+        case marks <= 69:
+            output.textContent = `C+`;
+        break;
+        case marks <= 79:
+            output.textContent = `Distinction`;
+        break;
+        case marks <= 89:
+            output.textContent = `B+`;
+        break;
+        case marks <= 99:
+            output.textContent = `A`;
+        break;
+        case marks == 100:
+            output.textContent = `A+`;
+        break;
+        default:
+            output.textContent = 'Crister Ronaldo, Sewey'
+            break;
+    }
+}
+btnSubmit.addEventListener('click', displayMarks)
 
 
-if(points<=90&&points>=99) {
-    alert("A");
-}
-if(points<=80&&points>=89) {
-    alert("B+");
-}
-if(points<=70&&points>=79) {
-    alert("Distinction");
-}
-if(points<=60&&points>=69) {
-    alert("C+");
-}
-if(points<=50&&points>=59) {
-    alert("Passed");
-}
-if(points<=50&&points) {
-    alert("Failed");
-}
+// THIS WAS MY ATTEMPT FOR THE MARKS CALCULATOR (its not functioning correctly):
 
+// let points = prompt("What is your percentage point total?");
+
+// if(points<=90&&points>=99) {
+//     alert("A");
+// }
+// if(points<=80&&points>=89) {
+//     alert("B+");
+// }
+// if(points<=70&&points>=79) {
+//     alert("Distinction");
+// }
+// if(points<=60&&points>=69) {
+//     alert("C+");
+// }
+// if(points<=50&&points>=59) {
+//     alert("Passed");
+// }
+// if(points<=50&&points) {
+//     alert("Failed");
+// }
