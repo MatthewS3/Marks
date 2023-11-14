@@ -14,7 +14,7 @@ Marks       Grade
 Below 50    Failed
 */
 
-
+// THIS FUNCTION IS THE WAY THAT JOEL DONE IT:
 let btnSubmit = document.querySelector('[data-submit]')
 
 // Create a Function:
